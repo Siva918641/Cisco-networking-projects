@@ -1,0 +1,31 @@
+# Router A
+enable
+conf t
+interface g0/0
+ ip address 10.0.0.1 255.0.0.0
+ no shutdown
+exit
+interface g0/1
+ ip address 192.168.1.1 255.255.255.0
+ no shutdown
+exit
+router rip
+ version 2
+ network 10.0.0.0
+ network 192.168.1.0
+exit
+
+# Router B
+interface g0/0
+ ip address 10.0.0.2 255.0.0.0
+ no shutdown
+exit
+interface g0/1
+ ip address 192.168.2.1 255.255.255.0
+ no shutdown
+exit
+router rip
+ version 2
+ network 10.0.0.0
+ network 192.168.2.0
+exit

@@ -1,0 +1,32 @@
+# Switch
+enable
+conf t
+vlan 10
+ name HR
+vlan 20
+ name IT
+exit
+interface range f0/1 - 2
+ switchport mode access
+ switchport access vlan 10
+exit
+interface range f0/3 - 4
+ switchport mode access
+ switchport access vlan 20
+exit
+interface g0/1
+ switchport mode trunk
+exit
+
+# Router (Router-on-a-Stick)
+interface g0/0.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+exit
+interface g0/0.20
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+exit
+interface g0/0
+ no shutdown
+exit
