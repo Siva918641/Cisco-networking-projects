@@ -1,43 +1,49 @@
 # Cisco Networking Projects
 
-This repository contains a collection of networking labs and configurations created using Cisco Packet Tracer. Each project focuses on different networking concepts such as LAN, VLAN, Routing Protocols (RIP, OSPF, BGP), ACLs, DHCP, and more.
+This repository contains a collection of Cisco Packet Tracer networking projects covering core networking concepts such as **switching**, **routing**, **VoIP**, **DHCP**, **VLAN**, and **security**.  
+Each project folder includes:
+- `.pkt` simulation file
+- `CLI_Commands.txt` for configuration
+- Verification screenshots (`.png`)
 
-These labs were built to support my learning and practice in the areas of network engineering and cybersecurity.
+##  Project List
 
-## Lab Categories
+| Project Name | Description |
+|--------------|-------------|
+| [ACL](ACL/) | Access Control Lists configuration and testing |
+| [BGP](BGP/) | Border Gateway Protocol setup between routers |
+| [DHCP](DHCP/) | Dynamic Host Configuration Protocol setup for automatic IP assignment |
+| [HTTP_Server](HTTP_Server/) | Configuring HTTP web server access |
+| [LAN](LAN/) | Local Area Network setup and verification |
+| [OSPF](OSPF/) | Open Shortest Path First dynamic routing configuration |
+| [RIP](RIP/) | Routing Information Protocol setup |
+| [SSH](SSH/) | Secure Shell configuration for router access |
+| [Static_IP](Static_IP/) | Manual static IP assignment for devices |
+| [VLAN](VLAN/) | Virtual LAN segmentation and inter-VLAN routing |
+| [VoIP](VoIP/) | Voice over IP configuration with DHCP and telephony |
 
-- Single & Dual LAN – Basic network setup using static IPs and router-based interconnection
-- VLAN & DHCP – Network segmentation and dynamic IP address assignment
-- Access Control Lists (ACLs) – Traffic filtering and access restrictions
-- Routing Protocols:
-  - RIP
-  - OSPF (Single Area and Multi-Area)
-  - BGP (Border Gateway Protocol)
-
-## What You’ll Learn
-
-- Configuring network devices using the CLI
-- Static and dynamic routing
-- Layer 2 and Layer 3 networking concepts
-- Building and testing real-world topologies
-- Analyzing packet flow and connectivity
+---
 
 ## Tools Used
-
 - Cisco Packet Tracer
-- Basic CLI configuration
+- Cisco 2811 / 2911 Routers
+- Cisco 2960 Switches
+- PCs, IP Phones, Servers
+
+---
 
 ## How to Use
+1. Open the `.pkt` file in Cisco Packet Tracer.
+2. Review `CLI_Commands.txt` for the exact configuration used.
+3. Check `.png` files for verification output.
 
-1. Download the `.pkt` files from any lab folder.
-2. Open them using Cisco Packet Tracer.
-3. Use the `.txt` files to view or apply configuration commands.
-4. Modify and test the labs to reinforce your understanding.
+---
 
 ## Author
+**Siva918641**  
+For educational use.
 
-Sivasankaran G  
-Aspiring Network Security Engineer | Cybersecurity Trainee | Tech Blogger  
+Network Engineer | Cybersecurity Trainee | Tech Blogger  
 Medium: [https://medium.com/@Sivasankarang](https://medium.com/@Sivasankarang)  
 GitHub: [https://github.com/Siva918641/Cisco-networking-projects](https://github.com/Siva918641)
 
