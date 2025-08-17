@@ -1,0 +1,38 @@
+en
+config te
+int fa 0/0
+ip add 192.168.58.1 255.255.255.0
+no shut 
+
+ex
+int fa 0/1
+ip add 192.168.69.1 255.255.255.0
+no shut 
+!DHCP 
+ip dhcp pool DEPARTMENT-1
+network 192.168.58.0 255.255.255.0
+default-router 192.168.58.1 
+no shut 
+
+ex
+!Static IP
+ip route 192.168.45.0 255.255.255.0 192.168.69.2
+no shut 
+
+!SSH 
+en
+config te
+username ADMIN
+enable secret <ENCRYPTED_PASSWORD>
+username ADMIN secret ADMIN2
+ip domain-name sivadhcpssh.com
+username ADMIN secret ADMIN2
+crypto generate key rsa 
+2048
+line vty 0 5
+transport input ssh
+login local
+exit 
+service password-encryption 
+^z
+
